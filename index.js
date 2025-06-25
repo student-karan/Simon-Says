@@ -19,7 +19,6 @@ const promise = (btn) => {
             btn.classList.remove('active')
             setTimeout(() => {
                 resolve(true);
-                
             }, 250)
         }, 1000)
     })
@@ -39,8 +38,8 @@ const btnclicked = (btn) => {
         }
     }
     else {
-        let reset = confirm(`You Lost,Your Score is Level ${level-1},wanna play again?`);
-        if (reset == true){
+        let reset = confirm(`You Lost,Your Score is ${level-1},wanna play again?`);
+        if (reset){
             level = 1;
             text.innerText = `Simon Says`
             sequence = [gameseq()];
